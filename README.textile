@@ -1,0 +1,9 @@
+h1. About
+
+Collection of some helpful small programs
+
+E.g. *CompareTwoFiles* which is really fast in doing a diff on two files.
+
+h2. Build and Execute
+
+* @mvn exec:java -Dexec.mainClass="de.dr0i.helper.CompareTwoFiles" -Dexec.args="fileA fileB"@
