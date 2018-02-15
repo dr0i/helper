@@ -27,8 +27,8 @@ import com.google.common.collect.Sets.SetView;
 public class CompareTwoFiles {
 
 	public static void main(String... args) {
-		File fileA = new File("/home/pc/workspace/CompareTwoFiles/verbund.idn");
-		File fileB = new File("/home/pc/workspace/CompareTwoFiles/lobid.idn");
+		File fileA = new File("./CompareTwoFiles/verbund.idn");
+		File fileB = new File("./CompareTwoFiles/lobid.idn");
 		if (args.length == 2) {
 			fileA = new File(args[0]);
 			fileB = new File(args[1]);
