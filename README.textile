@@ -6,4 +6,7 @@ E.g. *CompareTwoFiles* which is really fast in doing a diff on two files.
 
 h2. Build and Execute
 
-* @mvn exec:java -Dexec.mainClass="de.dr0i.helper.CompareTwoFiles" -Dexec.args="fileA fileB"@
+* @mvn clean install exec:java -Dexec.mainClass="de.dr0i.helper.CompareTwoFiles" -Dexec.args="fileA fileB"@
+
+FileA and fileB are absolute filenames.
+If you want to know which lines are part of file*A* AND NOT of file*B* the -Dexec.args="fileA fileB" is the right one. If you instead want to know which lines are part of file*B* BUT NOT of file*A* you switch the order, like: -Dexec.args="fileB fileA".
