@@ -3,14 +3,17 @@ h1. About
 Collection of some helpful small programs
 
 h2. *CompareTwoFiles*
+
 Fast in doing a diff on two files.
-
 *Build and Execute:*
-
-* @mvn exec:java -Dexec.mainClass="de.dr0i.helper.CompareTwoFiles" -Dexec.args="fileA fileB"@
+* @mvn clean install exec:java -Dexec.mainClass="de.dr0i.helper.CompareTwoFiles" -Dexec.args="fileA fileB"@
+FileA and fileB are absolute filenames.
+If you want to know which lines are part of file*A* AND NOT of file*B* the -Dexec.args="fileA fileB" is the right one. If you instead want to know which lines are part of file*B* BUT NOT of file*A* you switch the order, like: -Dexec.args="fileB fileA".
 
 h2. Elasticsearch reindexing
+
 Bulks download an elasticsearch index using `scroll_id` and index this into
 a new index. Makes use of https://github.com/moshe/elasticsearch_loader. Should
 work with ES version >2.4
 https://github.com/dr0i/helper/blob/master/src/main/bash/elasticsearchReindexing.sh
+
